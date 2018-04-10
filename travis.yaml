@@ -1,0 +1,14 @@
+sudo: required
+services:
+- docker
+language: bash
+script:
+- docker run --rm --privileged multiarch/qemu-user-static:register --reset
+- docker build -t jonmaddox/rpi-docker-node-sonos-http-api .
+- >
+  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+    docker tag jonmaddox/rpi-docker-node-sonos-http-api jonmaddox/rpi-docker-node-sonos-http-api:latest
+    docker push jonmaddox/rpi-docker-node-sonos-http-api:latest
+    docker push jonmaddox/rpi-docker-node-sonos-http-api
+  fi
