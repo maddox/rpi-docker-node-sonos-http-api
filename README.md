@@ -1,5 +1,5 @@
 # rpi-docker-node-sonos-http-api
-Docker wrapper for https://github.com/jishi/node-sonos-http-api
+Docker wrapper for https://github.com/jishi/node-sonos-http-api for running on a Raspberry Pi.
 
 [![Docker Stars](https://img.shields.io/docker/stars/jonmaddox/rpi-docker-node-sonos-http-api.svg)](https://hub.docker.com/r/jonmaddox/rpi-docker-node-sonos-http-api)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jonmaddox/rpi-docker-node-sonos-http-api.svg)](https://hub.docker.com/r/jonmaddox/rpi-docker-node-sonos-http-api)
